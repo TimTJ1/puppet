@@ -14,3 +14,7 @@ file { '/tmp/hello.txt':
 	ensure => file,
 	content => "hello, world\n",
 }
+
+file { '/etc/motd':
+	source => '/examples/files/motd.txt',
+}
