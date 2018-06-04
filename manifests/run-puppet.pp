@@ -18,3 +18,12 @@ file { '/tmp/hello.txt':
 file { '/etc/motd':
 	source => '/examples/files/motd.txt',
 }
+
+package { 'ruby':
+	ensure => installed,
+}
+
+package { 'puppet-lint':
+	ensure => installed,
+	provider => gem,
+}
